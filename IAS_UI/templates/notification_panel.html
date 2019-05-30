@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<form action="/add_notification_emails" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Notification Panel</h1>
+<br><br>
+</div>
+<div class="login-form">
+<div class="control-group">
+				Service : <input type="text" class="login-field" value="" name="service">
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+<div class="control-group">
+				<br>Emails : <input type="password" class="login-field" value="" placeholder="space separated emails" name="email">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+
+<br><br>
+<input type="submit" value="Submit" class="btn btn-primary btn-large btn-block">
+ 
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

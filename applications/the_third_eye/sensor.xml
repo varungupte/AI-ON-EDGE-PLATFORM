@@ -1,0 +1,16 @@
+<sensors>
+	<sensor>
+		<name>video</name>
+		<type>output</type>
+		<sensor_id>camera001</sensor_id>
+		<location>india/hyderabad</location>
+	</sensor>
+
+	<sensor>
+		<name>network</name>
+		<type>output</type>
+		<sensor_id>network001</sensor_id>
+		<location>india/hyderabad</location>
+	</sensor>
+
+</sensors>

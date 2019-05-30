@@ -1,0 +1,27 @@
+<platform>
+
+	<load_balancer>
+		<ip>10.42.0.1</ip>
+		
+		<uname>aman</uname>
+
+		<password>qwertyuiop</password>
+	</load_balancer>
+	
+	<scheduler>
+		<ip>10.42.0.1</ip>
+
+		<uname>aman</uname>
+
+		<password>qwertyuiop</password>
+	</scheduler>
+
+	<monitor>
+		<ip>10.42.0.1</ip>
+
+		<uname>aman</uname>
+
+		<password>qwertyuiop</password>
+	</monitor>
+
+</platform>

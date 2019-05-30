@@ -1,0 +1,139 @@
+<html>
+
+<head>
+	</head>
+
+	<body onload="initial_form()">
+
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+ 
+<script type="text/javascript">
+
+function initial_form()
+{
+		document.getElementsByName('num_times')[0].style.visibility = 'hidden';
+        document.getElementsByName('num_times')[0].value=""
+
+        document.getElementsByName('duration')[0].style.visibility = 'hidden';
+        document.getElementsByName('duration')[0].value=""
+
+        document.getElementsByName('start_timestamp')[0].style.visibility = 'hidden';
+        document.getElementsByName('start_timestamp')[0].value=""
+
+        document.getElementsByName('time_interval')[0].style.visibility = 'hidden';
+        document.getElementsByName('time_interval')[0].value=""
+
+        document.getElementsByName('num_times_label')[0].style.visibility = 'hidden';
+   
+
+        document.getElementsByName('duration_label')[0].style.visibility = 'hidden';
+        
+
+        document.getElementsByName('start_timestamp_label')[0].style.visibility = 'hidden';
+        
+        document.getElementsByName('time_interval_label')[0].style.visibility = 'hidden';
+        
+}
+function display_form() 
+{
+
+    var request_type=document.getElementsByName('type')[0].value
+    
+    if (request_type=="start_now" || request_type=="stop_now") 
+    {
+        document.getElementsByName('num_times')[0].style.visibility = 'hidden';
+        document.getElementsByName('duration')[0].style.visibility = 'hidden';
+        document.getElementsByName('run_dependent')[0].style.visibility = 'visible';
+        document.getElementsByName('start_timestamp')[0].style.visibility = 'hidden';
+        document.getElementsByName('time_interval')[0].style.visibility = 'hidden';
+        document.getElementsByName('num_times_label')[0].style.visibility = 'hidden';
+        document.getElementsByName('duration_label')[0].style.visibility = 'hidden';
+        document.getElementsByName('start_timestamp_label')[0].style.visibility = 'hidden';
+        document.getElementsByName('time_interval_label')[0].style.visibility = 'hidden';
+        document.getElementsByName('num_times')[0].value=""
+        document.getElementsByName('duration')[0].value=""
+        document.getElementsByName('start_timestamp')[0].value=""
+        document.getElementsByName('time_interval')[0].value=""
+    } 
+    else
+    {
+    	document.getElementsByName('run_dependent')[0].style.visibility = 'hidden';
+        document.getElementsByName('num_times')[0].style.visibility = 'visible';
+        document.getElementsByName('duration')[0].style.visibility = 'visible';
+        document.getElementsByName('start_timestamp')[0].style.visibility = 'visible';
+        document.getElementsByName('time_interval')[0].style.visibility = 'visible';
+        document.getElementsByName('num_times_label')[0].style.visibility = 'visible';
+        document.getElementsByName('duration_label')[0].style.visibility = 'visible';
+        document.getElementsByName('start_timestamp_label')[0].style.visibility = 'visible';
+        document.getElementsByName('time_interval_label')[0].style.visibility = 'visible';
+    }
+ 
+}
+
+</script>
+
+
+<form action="/schedule_job" method="POST"  enctype = "multipart/form-data">
+
+<div class="login">
+<div class="login-screen">
+<a href="/logout">Logout</a>
+<a href="/deploy.html">Deploy Application</a>
+<div class="app-title">
+
+<h1>Schedule Jobs</h1>
+
+</div>
+<div class="login-form">
+
+
+
+<div class="control-group">
+Request Type<br>
+<select name="type" onchange="display_form()">
+  <option value="start_now">Start A Service</option>
+  <option value="stop_now">Stop A Service</option>
+  <option value="interval_specific">Schedule Interval Specific Service</option>
+  <option value="dependent">Schedule Dependent Service</option>
+  <option value="independent">Schedule Independent Service</option>
+</select>
+
+<br><br><hr><br><br>
+
+
+Application ID<br>
+<input type="text" class="login-field" value="" name="app_id"><br>
+
+Service ID<br>
+<input type="text" class="login-field" value="" name="service_id"><br>
+
+Run Dependent<br>
+<select name='run_dependent'>
+<option value="true">true</option>
+<option value="false">false</option>
+</select> 
+
+
+<span name="num_times_label">How many Number Of Times you want to run it ?</span><br>
+<input type="text" class="login-field" value="" name="num_times"><br>
+
+<span name="start_timestamp_label">Start time stamp ?</span><br>
+<input type="text" class="login-field" value="" name="start_timestamp"><br>
+
+<span name="duration_label">Duration ?</span><br>
+<input type="text" class="login-field" value="" name="duration"><br>
+
+<span name="time_interval_label">Time Interval ?</span><br>
+<input type="text" class="login-field" value="" name="time_interval"><br>
+
+
+<br><br>
+<input type="submit" value="GO" class="btn btn-primary btn-large btn-block">
+ 
+</div>
+</div>
+</div>
+</form>
+
+</body>
+</html>

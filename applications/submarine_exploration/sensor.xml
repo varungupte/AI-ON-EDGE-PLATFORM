@@ -1,0 +1,22 @@
+<sensors>
+	<sensor>
+		<name>distance</name>
+		<type> two_way </type>
+		<sensor_id> distance001 </sensor_id>
+		<location> india/hyderabad </location>
+	</sensor>
+
+	<sensor>
+		<name> sonar </name>
+		<type> output </type>
+		<sensor_id> sonar001 </sensor_id>
+		<location> india/hyderabad </location>
+	</sensor>
+
+	<sensor>
+		<name> flower_analysis </name>
+		<type> output </type>
+		<sensor_id> iris001 </sensor_id>
+		<location> india/hyderabad </location>
+	</sensor>
+</sensors>

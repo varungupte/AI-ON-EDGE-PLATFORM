@@ -1,0 +1,49 @@
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+ 
+<form action="/deploy_files" method="POST"  enctype = "multipart/form-data">
+<div class="login">
+<div class="login-screen">
+<a href="/logout">Logout</a>
+<div class="app-title">
+
+<h1>Deploy Application</h1>
+
+</div>
+<div class="login-form">
+
+
+
+<div class="control-group">
+Application Name <br>
+<input type="text" class="login-field" value="" placeholder="Application Name" name="applicationname" required>
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+
+
+
+<div class="control-group">
+<br>Zip File<br> <input type="file" class="login-field" value="" name="zip_file" required>
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+
+
+
+
+
+<!--
+<div class="control-group">
+<Br>Where to deploy ?<br>
+Edge<input type="radio" class="login-field" style="width:100px" value="0" placeholder="Destination" name="destination" required>
+Server<input type="radio" class="login-field" style="width:100px" value="1" placeholder="Destination" name="destination" required>
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+-->
+
+
+
+
+<br><br>
+<input type="submit" value="Deploy" class="btn btn-primary btn-large btn-block">
+ 
+</div>
+</div>
+</div>
+</form>

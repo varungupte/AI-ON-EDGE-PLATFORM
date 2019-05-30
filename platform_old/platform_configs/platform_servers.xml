@@ -1,0 +1,10 @@
+<platform_servers>
+
+	<server>
+		<ip>10.42.0.1</ip>
+		
+		<uname>aman</uname>
+
+		<password>qwertyuiop</password>
+	</server>
+</platform_servers>

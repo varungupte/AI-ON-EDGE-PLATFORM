@@ -1,0 +1,44 @@
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+ 
+ 
+<form action="/deploy_files" method="POST"  enctype = "multipart/form-data">
+<div class="login">
+<div class="login-screen">
+<a href="/logout">Logout</a>
+<div class="app-title">
+
+<h1>Deploy Platform</h1>
+
+</div>
+<div class="login-form">
+
+
+
+<div class="control-group">
+<b>Load Balancer</b> <br>
+<br><label class="login-field" for="login-name">IP : {{ l_ip }}</label>
+<br><br><label class="login-field" for="login-name">Machine Name : {{ l_uname }} </label></div>
+
+<br><br>
+
+<div class="control-group">
+<b>Scheduler</b> <br>
+<br><label class="login-field" for="login-name">IP : {{ s_ip }}</label>
+<br><br><label class="login-field" for="login-name">Machine Name : {{ s_uname }} </label></div>
+
+<br><br>
+
+<div class="control-group">
+<b>Monitor</b> <br>
+<br><label class="login-field" for="login-name">IP : {{ m_ip }}</label>
+<br><br><label class="login-field" for="login-name">Machine Name : {{ m_uname }} </label></div>
+
+<br>
+<input type="submit" formaction="/deploy_the_platform" value="Deploy" class="btn btn-primary btn-large btn-block">
+ 
+</div>
+</div>
+</div>
+</form>
+

@@ -1,0 +1,1 @@
+loader 192.168.43.90 vagupta 9451388867 d1 5000 load_balancer_container scheduler_ip 192.168.43.229 deploy_manager_ip 192.168.43.15 rabbit_server_ip 192.168.43.90 replica_count 2 threshold 6.0 mongodb mongodb://192.168.43.90:27017/
